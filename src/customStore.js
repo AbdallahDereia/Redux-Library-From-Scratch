@@ -6,6 +6,7 @@ var Store = /** @class */ (function () {
         var _this = this;
         /**
          * This fuction returns the current state
+         * @author Abdallah Dereia
          */
         this.getState = function () {
             return _this._state;
@@ -14,6 +15,7 @@ var Store = /** @class */ (function () {
          *
          * @param action
          * This function dispatches an action
+         * @author Abdallah Dereia
          */
         this.dispatch = function (action) {
             //call the reducer to get the new state
@@ -26,6 +28,7 @@ var Store = /** @class */ (function () {
         /**
          *
          * this function get called every time the store gets changed
+         * @author Abdallah Dereia
          */
         this.subscribe = function (listener) {
             _this.listners.push(listener);
@@ -40,6 +43,7 @@ var Store = /** @class */ (function () {
  *
  * @param reducer
  * This function returns a new store object
+ * @author Abdallah Dereia
  */
 var createStore = function (reducer) {
     return new Store(reducer);

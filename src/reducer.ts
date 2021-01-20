@@ -9,7 +9,7 @@ const initialState = [
     ]
 /**
  * 
- * @param state 
+ * @param {object} state  
  * @param action 
  * This function takes the current instance of the store 
  * and returns the updated store

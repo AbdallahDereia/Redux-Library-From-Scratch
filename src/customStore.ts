@@ -12,6 +12,7 @@ class Store {
 
     /**
      * This fuction returns the current state
+     * @author Abdallah Dereia
      */
     getState = () => {
         return this._state
@@ -21,6 +22,7 @@ class Store {
      * 
      * @param action 
      * This function dispatches an action
+     * @author Abdallah Dereia
      */
     dispatch = (action:object) => {
         //call the reducer to get the new state
@@ -34,6 +36,7 @@ class Store {
     /**
      * 
      * this function get called every time the store gets changed
+     * @author Abdallah Dereia
      */
     subscribe = (listener:Function) => {
         this.listners.push(listener)
@@ -44,6 +47,7 @@ class Store {
  * 
  * @param reducer 
  * This function returns a new store object
+ * @author Abdallah Dereia
  */
 export const createStore = (reducer:Function) => {
     return new Store(reducer)

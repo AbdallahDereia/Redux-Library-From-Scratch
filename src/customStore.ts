@@ -10,10 +10,18 @@ class Store {
         this.listners = []
     }
 
+    /**
+     * This fuction returns the current state
+     */
     getState = () => {
         return this._state
     }
 
+    /**
+     * 
+     * @param action 
+     * This function dispatches an action
+     */
     dispatch = (action:object) => {
         //call the reducer to get the new state
         this._state = this.reducer(this._state , action)
@@ -32,6 +40,11 @@ class Store {
     }
 }
 
+/**
+ * 
+ * @param reducer 
+ * This function returns a new store object
+ */
 export const createStore = (reducer:Function) => {
     return new Store(reducer)
 }

@@ -7,7 +7,13 @@ const initialState = [
             resolved:false
         }
     ]
-
+/**
+ * 
+ * @param state 
+ * @param action 
+ * This function takes the current instance of the store 
+ * and returns the updated store
+ */
 export default function reducer(state=initialState ,action) {
     if(action.type === 'bugAdded'){
         return [

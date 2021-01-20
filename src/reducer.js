@@ -26,6 +26,13 @@ var initialState = [
         resolved: false
     }
 ];
+/**
+ *
+ * @param state
+ * @param action
+ * This function takes the current instance of the store
+ * and returns the updated store
+ */
 function reducer(state, action) {
     if (state === void 0) { state = initialState; }
     if (action.type === 'bugAdded') {

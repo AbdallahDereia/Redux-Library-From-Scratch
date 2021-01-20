@@ -4,9 +4,17 @@ exports.createStore = void 0;
 var Store = /** @class */ (function () {
     function Store(reducer) {
         var _this = this;
+        /**
+         * This fuction returns the current state
+         */
         this.getState = function () {
             return _this._state;
         };
+        /**
+         *
+         * @param action
+         * This function dispatches an action
+         */
         this.dispatch = function (action) {
             //call the reducer to get the new state
             _this._state = _this.reducer(_this._state, action);
@@ -28,6 +36,11 @@ var Store = /** @class */ (function () {
     }
     return Store;
 }());
+/**
+ *
+ * @param reducer
+ * This function returns a new store object
+ */
 var createStore = function (reducer) {
     return new Store(reducer);
 };
